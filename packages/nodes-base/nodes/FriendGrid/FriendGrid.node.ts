@@ -30,8 +30,24 @@ export class FriendGrid implements INodeType {
         credentials: [
         ],
         properties: [
-            // Node properties which the user gets displayed and
-            // can change on the node.
+            {
+				displayName: 'Resource',
+				name: 'resource',
+				type: 'options',
+				noDataExpression: true,
+				options: [
+					{
+						name: 'Contact',
+						value: 'contact',
+					},
+					{
+						name: 'List',
+						value: 'list',
+					},
+					{
+						name: 'Mail',
+						value: 'mail',
+					},
         ],
     };
 
