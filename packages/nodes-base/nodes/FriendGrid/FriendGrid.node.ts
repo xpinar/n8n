@@ -1,3 +1,4 @@
+
 import {
     IExecuteFunctions,
 } from 'n8n-core';
@@ -27,44 +28,12 @@ export class FriendGrid implements INodeType {
         },
         inputs: ['main'],
         outputs: ['main'],
-  credentials: [
-			{
-				name: 'FrienGridApi',
-				required: true,
-			},
-		],
-		properties: [
-			// Node properties which the user gets displayed and
-			// can change on the node.
-			{
-				displayName: 'Resource',
-				name: 'resource',
-				type: 'options',
-				noDataExpression: true,
-				options: [
-					{
-						name: 'Contact',
-						value: 'contact',
-					},
-					{
-						name: 'List',
-						value: 'list',
-					},
-					{
-						name: 'Mail',
-						value: 'mail',
-					},
-				],
-				default: 'list',
-				required: true,
-			},
-			...listOperations,
-			...listFields,
-			...contactOperations,
-			...contactFields,
-			...mailOperations,
-			...mailFields,
-		],
+        credentials: [
+        ],
+        properties: [
+            // Node properties which the user gets displayed and
+            // can change on the node.
+        ],
     };
 
     async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
