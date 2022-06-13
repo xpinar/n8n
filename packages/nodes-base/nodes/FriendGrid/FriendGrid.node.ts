@@ -27,10 +27,16 @@ export class FriendGrid implements INodeType {
         },
         inputs: ['main'],
         outputs: ['main'],
-        credentials: [
-        ],
-        properties: [
-            {
+  credentials: [
+			{
+				name: 'FrienGridApi',
+				required: true,
+			},
+		],
+		properties: [
+			// Node properties which the user gets displayed and
+			// can change on the node.
+			{
 				displayName: 'Resource',
 				name: 'resource',
 				type: 'options',
@@ -48,7 +54,17 @@ export class FriendGrid implements INodeType {
 						name: 'Mail',
 						value: 'mail',
 					},
-        ],
+				],
+				default: 'list',
+				required: true,
+			},
+			...listOperations,
+			...listFields,
+			...contactOperations,
+			...contactFields,
+			...mailOperations,
+			...mailFields,
+		],
     };
 
     async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
