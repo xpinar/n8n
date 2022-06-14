@@ -1,18 +1,16 @@
 
-import {
-    IExecuteFunctions,
-} from 'n8n-core';
+import { IExecuteFunctions}   from 'n8n-core';
 
 import {
     IDataObject,
     INodeExecutionData,
     INodeType,
     INodeTypeDescription,
-} from 'n8n-workflow';
+}   from 'n8n-workflow';
 
 import {
     OptionsWithUri,
-} from 'request';
+}   from 'request';
 
 export class FriendGrid implements INodeType {
     description: INodeTypeDescription = {
