@@ -28,10 +28,10 @@ export class FriendGrid implements INodeType {
         outputs: ['main'],
         credentials: [
         ],
-        //properties: [
+        properties: [
             // Node properties which the user gets displayed and
             // can change on the node.
-        //],
+        ],
     };
 
     async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
